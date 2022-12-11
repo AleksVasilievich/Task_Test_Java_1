@@ -9,19 +9,17 @@ public class test_3 {
         int[] array = create(count);
         fill(array);
         // print(array);
-        meetingFrequency(array);
+        FrequencyMeeting(array);
         print(array);
     }
 
     static int getValue(String text) {
         System.out.println("Введите размер массива");
+        Scanner size_ar = new Scanner(System.in);
+        int count = size_ar.nextInt();
+        size_ar.close();
+        return count;
 
-        try (Scanner scanner = new Scanner(System.in)) {
-            Scanner iScanner = new Scanner(System.in);
-            int count = scanner.nextInt();
-            iScanner.close();
-            return count;
-        }
     }
 
     static int[] create(int count) {
@@ -34,44 +32,33 @@ public class test_3 {
         for (int i = 0; i < array.length; i++)
             array[i] = r.nextInt(10);
     }
-    
-    static void meetingFrequency(int[] array) {
+
+    // static void FrequencyMeeting(int[] array) {
+
+    // }
+
+    static void FrequencyMeeting(int[] array) {
         for (int i = 0; i < array.length; i++) {
             int num = 0;
             int sum = 0;
             for (int j = 0; j < array.length; j++)
                 if (array[i] == array[j] && array[i] != sum)
                     num++;
-                    System.out.printf("i=%d ; num=%d --> ",  array[i], num, sum);
-                if (num > 1)
-                    sum = array[i];
-                    
+            // System.out.printf("i=%d ; num=%d --> ", array[i], num, sum);
+            System.out.println(array[i] + " Встречается " + num + " раз");
+            if (num > 1)
+                sum = array[i];
+
         }
     }
 
-
-
-    // static void meetingFrequency(int[] array) {
-    //     // int elem;
-    //     // elem = 0;
-    //     int num;
-    //     num = 0;
-    //     for (int i = 0; i < array.length; i++)
-    //         for (int j = 0; j < array.length; j++)
-    //             // elem = array[i];
-    //             if (array[i] == array[j]) {
-    //                 num++;
-    //                 System.out.printf("i=%d; num=%d =>  ", array[i], num);
-    //                 num = 0;
-    //             }
-    // }
-
     static void print(int[] array) {
+        System.out.println(" Наш массив ");
         for (int i = 0; i < array.length; i++) {
             System.out.printf("%d ", array[i]);
         }
-        // Scanner scanner;
-        // scanner.close();
     }
 
 }
+
+// System.out.println(array[i] + "Встречается " + sum + "раз");
