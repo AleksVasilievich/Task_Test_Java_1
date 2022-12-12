@@ -36,14 +36,10 @@ public class program_3 {
     static void FrequencyMeeting(int[] array) {
             for (int i = 0; i < array.length; i++) {
                 int num = 0;
-                int sum = 0;
                 for (int j = 0; j < array.length; j++)
-                    if (array[i] == array[j] && array[i] != sum)
+                    if (array[i] == array[j])
                         num++;
-                // System.out.printf("i=%d ; num=%d --> ", array[i], num, sum);
                 System.out.println(array[i] + " Встречается " + num + " раз");
-                if (num > 1)
-                    sum = array[i];
     
             }
         }

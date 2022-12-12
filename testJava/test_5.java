@@ -1,20 +1,23 @@
 package testJava;
 
+/**
+ * test_5
+ */
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-// import java.util.ArrayList;
 
-public class test_3 {
-    public static void main(String[] args) {
+public class test_5 {
+    public static void main(String[] args){
         int count = getValue("Введите размер");
         int[] array = create(count);
         fill(array);
-        print(array);
+        //print(array);
         FrequencyMeeting(array);
         // int[] array = elemClear()
         print(array);
-    }
-
+    } 
+    
     static int getValue(String text) {
         System.out.println("Введите размер массива");
         Scanner size_ar = new Scanner(System.in);
@@ -45,21 +48,9 @@ public class test_3 {
                     //System.out.println(array[i] + " Встречается " + num + " раз");
                 }
                 System.out.println(array[i] + " Встречается " + num + " раз");
-                // for (int k = 0; k < array.length; k++ )
-                //     if  (array[k] == array[i])
-                //         array[k] = 0; 
+                   
                 
-                //if (num > 1) {
-                    //System.out.println(array[i] + " Встречается " + num + " раз");
-                    //continue;
-                    // ArrayList<Integer> arrayList = new ArrayList<>();
-                    // arrayList.remove(i);
-                    // num = 0;
-                //}       
-            //System.out.println(array[i] + " Встречается " + num + " раз");
-
-            // if (num > 1)
-                // sum = array[i];
+           
 
         }
     }
@@ -71,17 +62,16 @@ public class test_3 {
         //System.out.println();
         }
     }
-
-    // static void elemClear(int i) {
+}
+    // static void elemClear(int [] array) {
     //     // List list = Collections.synchronizedList(new ArrayList());
     //     ArrayList objArray = new ArrayList();
     //     objArray.clear();
-    //     // objArray.add(0, "Привет");
-    //     // objArray.add(1, "Здравствуйте");
-    //     // objArray.add(2, "Hello");
-    //     // System.out.println("Текст 1：" + objArray);
-    //     objArray.remove(i);
-    //     // objArray.remove("");
-    //     System.out.println(objArray);
+    //     objArray.add(0, "Привет");
+    //     objArray.add(1, "Здравствуйте");
+    //     objArray.add(2, "Hello");
+    //     System.out.println("Текст 1：" + objArray);
+    //     objArray.remove(1);
+    //     objArray.remove("");
+    //     System.out.println("Текст 2：" + objArray);
     // }
-}
