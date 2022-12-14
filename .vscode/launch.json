@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch test_8",
+            "request": "launch",
+            "mainClass": "testJava.test_8",
+            "projectName": "Java_projects_83990973"
+        },
+        {
+            "type": "java",
+            "name": "Launch tesy_7",
+            "request": "launch",
+            "mainClass": "testJava.tesy_7",
+            "projectName": "Java_projects_83990973"
+        },
+        {
+            "type": "java",
+            "name": "Launch test_6",
+            "request": "launch",
+            "mainClass": "testJava.test_6",
+            "projectName": "Java_projects_83990973"
+        },
+        {
+            "type": "java",
+            "name": "Launch java_lesson_1",
+            "request": "launch",
+            "mainClass": "testJava.java_lesson_1",
+            "projectName": "Java_projects_83990973"
+        },
+        {
+            "type": "java",
+            "name": "Attach",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": "<debug port of the debuggee>"
+        },
+        {
+            "type": "java",
             "name": "Launch test_5",
             "request": "launch",
             "mainClass": "testJava.test_5",
