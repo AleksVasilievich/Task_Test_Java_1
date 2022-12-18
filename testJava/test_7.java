@@ -2,7 +2,7 @@ package testJava;
 
 import java.util.Scanner;
 
-public class tesy_7 {
+public class test_7 {
     public static void hanoiTowers(int quantity, int from, int to, int bufPeg) {
         if (quantity != 0) {
             hanoiTowers(quantity - 1, from, bufPeg, to);
