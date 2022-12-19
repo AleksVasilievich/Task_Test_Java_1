@@ -43,6 +43,6 @@ public class test_13 {
 
         quickSort(x, low, high);
         System.out.println("Стало");
-        System.out.println(Arrays.toString(x));
+        System.out.println(Arrays.toString(x));   
     }
 }

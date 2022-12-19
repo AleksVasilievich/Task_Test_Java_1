@@ -3,18 +3,19 @@ package testJava;
 import java.util.Arrays;
 
 public class test_12 {
-    public static void quickSort(int[] array, int low, int high) {
+    public static void quickSort(int[] array, int low, int high) {        // Метод принимает неотсортированный массив,
+                                                                        // индекс первого и последнего элемента массива
         if (array.length == 0)
-            return;                    // завершить выполнение, если длина массива равна 0
+            return;                                       // завершить выполнение, если длина массива равна 0
 
-        if (low >= high)
-            return;                    // завершить выполнение если уже нечего делить
+        if (low >= high)                               // завершить выполнение если уже нечего делить
+            return;
 
-        // выбрать опорный элемент
+                                                    // выбрать опорный элемент из массива для оптимизации алгоритма
         int middle = low + (high - low) / 2;
         int opora = array[middle];
 
-                                       // разделить на подмассивы, который больше и меньше опорного элемента
+                                                // разделить на подмассивы, который больше и меньше опорного элемента
         int i = low, j = high;
         while (i <= j) {
             while (array[i] < opora) {
@@ -25,7 +26,7 @@ public class test_12 {
                 j--;
             }
 
-            if (i <= j) {               // меняем местами
+            if (i <= j) {                   // меняем местами ,сортируем
                 int temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
@@ -34,7 +35,7 @@ public class test_12 {
             }
         }
 
-                                        // вызов рекурсии для сортировки левой и правой части
+                                              // вызов рекурсии для сортировки левой и правой части
         if (low < j)
             quickSort(array, low, j);
 
@@ -43,15 +44,15 @@ public class test_12 {
     }
 
     public static void main(String[] args) {
-        int[] x = { 8, 0, 4, 7, 3, 7, 10, 12, -3 };
-        System.out.println("Было");
+        int[] x = { 8, 0, 4, 7, 3, 7, 10, 12, -3 };         //  неотсортированный массив
+        System.out.println("Исходный массив");
         System.out.println(Arrays.toString(x));
 
-        int low = 0;
-        int high = x.length - 1;
+        int low = 0;                                      //  индекс первого элемента
+        int high = x.length - 1;                         //  индекс поледнего элемента
 
         quickSort(x, low, high);
-        System.out.println("Стало");
+        System.out.println("Отсортированный массив");
         System.out.println(Arrays.toString(x));
     }
 }
