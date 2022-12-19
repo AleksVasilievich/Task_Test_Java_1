@@ -44,7 +44,7 @@ public class test_12 {
     }
 
     public static void main(String[] args) {
-        int[] x = { 8, 0, 4, 7, 3, 7, 10, 12, -3 };         //  неотсортированный массив
+        int[] x = { 9, 2, -1, 8, 0, 5, 7, 3, 7, 11, 23, -4, 10 };         //  неотсортированный массив
         System.out.println("Исходный массив");
         System.out.println(Arrays.toString(x));
 
