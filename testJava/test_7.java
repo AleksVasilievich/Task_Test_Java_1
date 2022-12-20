@@ -1,5 +1,5 @@
 package testJava;
-
+                             // Ханойская башня
 import java.util.Scanner;
 
 public class test_7 {

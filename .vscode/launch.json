@@ -4,7 +4,34 @@
     // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "Launch test_2",
+            "request": "launch",
+            "mainClass": "testJava.test_2",
+            "projectName": "Java_projects_83990973"
+        },
+        {
+            "type": "java",
+            "name": "Launch test_15",
+            "request": "launch",
+            "mainClass": "testJava.test_15",
+            "projectName": "Java_projects_83990973"
+        },
+        {
+            "type": "java",
+            "name": "Launch test_7",
+            "request": "launch",
+            "mainClass": "testJava.test_7",
+            "projectName": "Java_projects_83990973"
+        },
+        {
+            "type": "java",
+            "name": "Launch test_14",
+            "request": "launch",
+            "mainClass": "testJava.test_14",
+            "projectName": "Java_projects_83990973"
+        },
         {
             "name": "Python: текущий файл",
             "type": "python",

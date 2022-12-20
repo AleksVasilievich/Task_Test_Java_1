@@ -4,7 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * test_1
+ * test_1   Запросить  размер массива и вывести на экран массив 
+ *          этого размера из случайных чисел
  */
 public class test_1 {
     public static void main(String[] args) {

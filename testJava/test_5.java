@@ -1,8 +1,12 @@
 package testJava;
 
 /**
- * test_5
+ * test_5   /**
+ * Составить частотный словарь элементов одномерного массива
+ * Частотный словарь содержит информацию о том, сколько раз встречается элемент
+ * входных данных.
  */
+
 // import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;

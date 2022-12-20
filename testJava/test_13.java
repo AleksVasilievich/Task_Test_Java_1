@@ -1,5 +1,10 @@
 package testJava;
 
+/**
+ *    Метод быстрой сортировки (Quick sort)
+ */
+
+
 import java.util.Arrays;
 
 public class test_13 {
