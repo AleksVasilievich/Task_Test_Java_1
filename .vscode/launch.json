@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch test_17",
+            "request": "launch",
+            "mainClass": "testJava.test_17",
+            "projectName": "Java_projects_83990973"
+        },
+        {
+            "type": "java",
+            "name": "Attach",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": "<debug port of the debuggee>"
+        },
+        {
+            "type": "java",
+            "name": "Launch test_16",
+            "request": "launch",
+            "mainClass": "testJava.test_16",
+            "projectName": "Java_projects_83990973"
+        },
+        {
+            "type": "java",
             "name": "Launch test_2",
             "request": "launch",
             "mainClass": "testJava.test_2",
