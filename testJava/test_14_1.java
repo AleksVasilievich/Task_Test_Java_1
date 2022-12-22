@@ -6,12 +6,15 @@ package testJava;
  */
 public class test_14_1 {
     public static void main(String[] args) {
-        int num = 11;
-        //int sum = 0;
-        if (num % 2 != 0)  
-            num = num - 1;    
-        if (num % 2 == 0)
-            num = num / 2;
-        System.out.print(num);   
+        //int n = 11;
+        int[] array = new int[12];
+        array[2] = 1;
+        for (int i = 2; i < array.length; i++) {
+            array[i] = array[i] + array[i - 1];
+            if (i % 2 == 0)
+                array[i] = array[i] + array[i / 2];
+            System.out.print(array[i]);
+        }
+
     }
 }

@@ -22,15 +22,15 @@ public class test_14 {
     public static void F(int a, int b) {
         int[] array = new int[b];
         array[1] = a;
-        //array[-1] = b;
+        array[-1] = b;
         for (int i = 1; i < array.length; i++) {
             array[i] = array[i] + array[i - 1];
             if (i % 2 == 0) {
                 array[i] = array[i] + array[i / 2];
-            }    
-       }
-    
-        System.out.print();
+                System.out.print(array[i]);
+            }
+        }
+
     }
 
 }

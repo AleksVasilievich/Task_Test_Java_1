@@ -1,5 +1,7 @@
 import random
 
+# Сортировка quicksort
+
 def quicksort(nums):
    if len(nums) <= 1:
        return nums
