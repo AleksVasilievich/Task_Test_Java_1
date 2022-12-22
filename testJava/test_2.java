@@ -1,7 +1,8 @@
 package testJava;
 
 /**
- * test_2
+ * test_2 Семинар 5. Есть две последовательности . 
+ *    Нужно найти максимальное количество подпоследовательностей данных двух.
  */
 public class test_2 {
     public static void main(String[] args) {
@@ -9,8 +10,8 @@ public class test_2 {
         String s1 = "5127381";
         String s2 = "523891";
     
-        //System.out.println(LEN(s1, s2));
-        System.out.println(LEN3(0, 0));
+      System.out.println(LEN(s1, s2));
+      //System.out.println(LEN3(0, 0));
       }
     
       static int LEN(String a, String b) {

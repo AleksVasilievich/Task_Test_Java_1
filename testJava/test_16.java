@@ -1,5 +1,9 @@
 package testJava;
 
+/*
+ * Нахождение максимального и минимального элемента
+ */
+
 public class test_16 {
     public static void main(String[] args) {
         int[] a = { 2, -5, 3, 0, 5, -8, 12, 1 };
