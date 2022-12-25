@@ -7,8 +7,8 @@ package testJava;
 public class test_14_2 {
 
     public static void main(String[] args) {
-        int n1 = 25000;     // Конечное значение.
-        int n2 = 2;      // Начальное значение.
+        int n1 = 25000; // Конечное значение.
+        int n2 = 2; // Начальное значение.
         calk(n1, n2);
     }
 
@@ -20,8 +20,8 @@ public class test_14_2 {
             array[i] = array[i] + array[i - 1];
             if (i % 2 == 0)
                 array[i] = array[i] + array[i / 2];
-                if (i == array.length - 1)
-                    System.out.print(array[i]);
+            if (i == array.length - 1)
+                System.out.print(array[i]);
         }
     }
 }
