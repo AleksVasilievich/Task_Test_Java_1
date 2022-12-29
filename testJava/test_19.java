@@ -50,9 +50,9 @@ class MapGenerator {
   public MapGenerator() {
     int[][] map = {
         { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 },
-        { -1, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, -1 },
+        { -1, 00, 00, 00, -1, 00, 00, 00, 00, 00, 00, 00, 00, 00, -1 },
         { -1, 00, 00, 00, 00, 00, 00, -1, 00, 00, 00, 00, 00, 00, -1 },
-        { -1, 00, 00, 00, 00, 00, 00, -1, 00, 00, 00, 00, 00, 00, -1 },
+        { -1, 00, 00, 00, -1, 00, 00, -1, 00, 00, 00, 00, 00, 00, -1 },
         { -1, 00, 00, 00, -1, 00, -1, -1, -1, -1, 00, 00, 00, 00, -1 },
         { -1, 00, 00, 00, -1, 00, -1, 00, 00, -1, 00, 00, 00, 00, -1 },
         { -1, -1, -1, 00, -1, 00, -1, 00, 00, -1, 00, 00, 00, 00, -1 },
@@ -165,6 +165,7 @@ class WaveAlgorithm {
         queue.add(new Point2D(p.x, p.y + 1));
         map[p.x][p.y + 1] = map[p.x][p.y] + 1;
       }
+      //map[startPoint.x][startPoint.y] = 888;
     }
   }
 
@@ -177,24 +178,22 @@ class WaveAlgorithm {
     while (road.size() != 0) {
       Point2D pi = road.remove();
 
-      if (map[pi.x - 1][pi.y] == (map[pi.x][pi.y]) - 1) {
+      if (map[pi.x - 1][pi.y] == map[pi.x][pi.y] - 1) {
         road.add(new Point2D(pi.x - 1, pi.y));
-        map[pi.x - 1][pi.y] = 888;       
+        map[pi.x][pi.y] = 888;       
       }
-      if (map[pi.x][pi.y - 1] == (map[pi.x][pi.y]) - 1) {
+      if (map[pi.x][pi.y - 1] == map[pi.x][pi.y] - 1) {
         road.add(new Point2D(pi.x, pi.y - 1));
-        map[pi.x][pi.y - 1] = 888;       
+        map[pi.x][pi.y] = 888;       
       }
-      if (map[pi.x + 1][pi.y] == (map[pi.x][pi.y]) + 1) {
+      if (map[pi.x + 1][pi.y] == map[pi.x][pi.y] - 1) {
         road.add(new Point2D(pi.x + 1, pi.y));
-        map[pi.x + 1][pi.y] = 888;       
+        map[pi.x][pi.y] = 888;       
       }
-      if (map[pi.x][pi.y + 1] == (map[pi.x][pi.y]) - 1) {
+      if (map[pi.x][pi.y + 1] == map[pi.x][pi.y] - 1) {
         road.add(new Point2D(pi.x, pi.y + 1));
-        map[pi.x][pi.y + 1] = 888;       
-      }
-
-      
+        map[pi.x][pi.y] = 888;       
+      }  
     }
   }
 }
