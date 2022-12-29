@@ -1,6 +1,6 @@
 package testJava;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -9,11 +9,13 @@ public class test_19 {
 
     var mg = new MapGenerator();
     System.out.println(
-        //new MapPrinter().mapColor(mg.getMap()));
         new MapPrinter().rawData(mg.getMap()));
 
     var lee = new WaveAlgorithm(mg.getMap());
     lee.Colorize(new Point2D(3, 3));
+
+    var exi = new WaveAlgorithm(mg.getMap());
+    exi.getRoad(new Point2D(9, 12));
 
     System.out.println(
         new MapPrinter().rawData(mg.getMap()));
@@ -21,7 +23,7 @@ public class test_19 {
 }
 
 class Point2D {
-  int x, y;  
+  int x, y;
 
   public Point2D(int x, int y) {
     this.x = x;
@@ -48,9 +50,9 @@ class MapGenerator {
   public MapGenerator() {
     int[][] map = {
         { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 },
-        { -1, 00, 00, 00, -1, 00, 00, 00, 00, 00, 00, 00, 00, 00, -1 },
+        { -1, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, -1 },
         { -1, 00, 00, 00, 00, 00, 00, -1, 00, 00, 00, 00, 00, 00, -1 },
-        { -1, 00, 00, 00, -1, 00, 00, -1, 00, 00, 00, 00, 00, 00, -1 },
+        { -1, 00, 00, 00, 00, 00, 00, -1, 00, 00, 00, 00, 00, 00, -1 },
         { -1, 00, 00, 00, -1, 00, -1, -1, -1, -1, 00, 00, 00, 00, -1 },
         { -1, 00, 00, 00, -1, 00, -1, 00, 00, -1, 00, 00, 00, 00, -1 },
         { -1, -1, -1, 00, -1, 00, -1, 00, 00, -1, 00, 00, 00, 00, -1 },
@@ -108,10 +110,10 @@ class MapPrinter {
       for (int col = 0; col < map[row].length; col++) {
         switch (map[row][col]) {
           case 0:
-            sb.append("в–‘");
+            sb.append("A");
             break;
           case -1:
-            sb.append("в–“");
+            sb.append("В");
             break;
           case -2:
             sb.append("K");
@@ -166,9 +168,33 @@ class WaveAlgorithm {
     }
   }
 
-  public ArrayList<Point2D> getRoad(Point2D exit) {
-    ArrayList<Point2D> road = new ArrayList<>();
-    ///
-    return road;
+  public void getRoad(Point2D exitPoint) {
+
+    Queue<Point2D> road = new LinkedList<>();
+    road.add(exitPoint);
+    map[exitPoint.x][exitPoint.y] = 20;
+
+    while (road.size() != 0) {
+      Point2D pi = road.remove();
+
+      if (map[pi.x - 1][pi.y] == (map[pi.x][pi.y]) - 1) {
+        road.add(new Point2D(pi.x - 1, pi.y));
+        map[pi.x - 1][pi.y] = 888;       
+      }
+      if (map[pi.x][pi.y - 1] == (map[pi.x][pi.y]) - 1) {
+        road.add(new Point2D(pi.x, pi.y - 1));
+        map[pi.x][pi.y - 1] = 888;       
+      }
+      if (map[pi.x + 1][pi.y] == (map[pi.x][pi.y]) + 1) {
+        road.add(new Point2D(pi.x + 1, pi.y));
+        map[pi.x + 1][pi.y] = 888;       
+      }
+      if (map[pi.x][pi.y + 1] == (map[pi.x][pi.y]) - 1) {
+        road.add(new Point2D(pi.x, pi.y + 1));
+        map[pi.x][pi.y + 1] = 888;       
+      }
+
+      
+    }
   }
 }
